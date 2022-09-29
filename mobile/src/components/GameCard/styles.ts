@@ -14,9 +14,9 @@ export const styles = StyleSheet.create({
   },
   footer: {
     width: '100%',
-    height: 102,
+    height: 120,
     padding: 16,
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
   },
   name: {
     color: THEME.COLORS.TEXT,
@@ -27,5 +27,5 @@ export const styles = StyleSheet.create({
     color: THEME.COLORS.CAPTION_300,
     fontSize: THEME.FONT_SIZE.MD,
     fontFamily: THEME.FONT_FAMILY.REGULAR,
-  },
+  }
 });

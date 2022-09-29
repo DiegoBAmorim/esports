@@ -11,6 +11,7 @@ import axios from 'axios';
 interface Game {
   id: string;
   name: string;
+  title: string;
 }
 
 export function CreateAdModal() {
@@ -33,7 +34,7 @@ export function CreateAdModal() {
     if (!data.name) {
       return;
     }
-
+    console.log(useVoiceChannel);
     try {
       await axios.post(`http://localhost:3333/games/${data.game}/ads`, {
         name: data.name,
@@ -42,7 +43,7 @@ export function CreateAdModal() {
         weekDays: weekDays.map(Number),
         hourStart: data.hourStart,
         hourEnd: data.hourEnd,
-        useVoiceChannel: data.useVoiceChannel,
+        useVoiceChannel: useVoiceChannel,
       });
 
       alert('Anúncio criado com sucesso!');
@@ -66,7 +67,7 @@ export function CreateAdModal() {
             <label htmlFor='game' className='font-semibold'>
               Qual o game?
             </label>
-            {/* TO-DO: Implemntar o Select do radix-ui */}
+            {/* TODO: Implemntar o Select do radix-ui */}
             <select
               id='game'
               name='game'
@@ -79,7 +80,7 @@ export function CreateAdModal() {
 
               {games.map((game) => (
                 <option key={game.id} value={game.id}>
-                  {game.name}
+                  {game.title}
                 </option>
               ))}
             </select>
