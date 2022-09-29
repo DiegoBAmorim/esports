@@ -103,7 +103,7 @@ ou
 expo start
 ```
 
-Obs.: não esqueça de trocar pelo IP da sua máquina, para verificar o IP utilize o seguinte comando no terminal e achei o IPv4:
+Obs.: não esqueça de trocar pelo IP da sua máquina, para verificar o IP utilize o seguinte comando no terminal e ache o Ip:
 
 #### windows
 
